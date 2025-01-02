@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>robopigeon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>robopigeon</h1>
+        </div>
+
+        <div class="search-bar">
+            <form>
+                <input type="text" placeholder="Input...">
+            </form>
+        </div>
+
+        <div class="actions">
+            <button id="random-post-btn">🎲 Random Post</button>
+        </div>
+
+        <div class="actions">
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section - Big Story and Top Commentators -->
+        <section class="boxes-container hero-section">
+            <article class="my-box big-story">
+                <h2>Big Story of the Day</h2>
+                <p>Highlight the main topic or story here.</p>
+            </article>
+
+            <aside class="my-box smaller top-commentators">
+                <h3>Top Commentators</h3>
+                <ul>
+                    <li>User123</li>
+                    <li>StorySeeker88</li>
+                    <li>Anon321</li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- Initial Carousel -->
+        <section class="carousel-container" id="featured-carousel">
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+        </section>
+
+        <!-- Initial 5 Trending Stories -->
+        <section class="initial-trending">
+            <div class="trending-stories-container">
+                <article class="my-box trending">
+                    <h3>Trending Story #1</h3>
+                    <p>Short and intriguing summary.</p>
+                </article>
+            </div>
+            
+            <div class="trending-stories-container">
+                <article class="my-box trending">
+                    <h3>Trending Story #2</h3>
+                    <p>Short and intriguing summary.</p>
+                </article>
+            </div>
+            
+            <div class="trending-stories-container">
+                <article class="my-box trending">
+                    <h3>Trending Story #3</h3>
+                    <p>Short and intriguing summary.</p>
+                </article>
+            </div>
+            
+            <div class="trending-stories-container">
+                <article class="my-box trending">
+                    <h3>Trending Story #4</h3>
+                    <p>Short and intriguing summary.</p>
+                </article>
+            </div>
+            
+            <div class="trending-stories-container">
+                <article class="my-box trending">
+                    <h3>Trending Story #5</h3>
+                    <p>Short and intriguing summary.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
