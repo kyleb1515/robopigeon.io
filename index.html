@@ -4,99 +4,106 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>robopigeon</title>
+    <title>robopigeon - Wellness & Health Analytics</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            <h1>robopigeon</h1>
+            <h1><i class="fas fa-dove"></i> robopigeon</h1>
+            <p class="tagline">Your Daily Wellness Companion</p>
         </div>
 
         <div class="search-bar">
             <form>
-                <input type="text" placeholder="Input...">
+                <input type="text" placeholder="Search wellness topics...">
             </form>
         </div>
 
         <div class="actions">
-            <button id="random-post-btn">🎲 Random Post</button>
-        </div>
-
-        <div class="actions">
+            <button id="wellness-tip-btn"><i class="fas fa-heart"></i> Daily Wellness Tip</button>
             <button class="login-btn">Login</button>
         </div>
     </header>
 
     <main class="main-content">
-        <!-- Hero Section - Big Story and Top Commentators -->
-        <section class="boxes-container hero-section">
-            <article class="my-box big-story">
-                <h2>Big Story of the Day</h2>
-                <p>Highlight the main topic or story here.</p>
-            </article>
+        <!-- Wellness Dashboard -->
+        <section class="dashboard-grid">
+            <div class="dashboard-item" id="weather-quality">
+                <h3><i class="fas fa-cloud-sun"></i> Local Air Quality & Weather</h3>
+                <div class="data-content"></div>
+            </div>
 
-            <aside class="my-box smaller top-commentators">
-                <h3>Top Commentators</h3>
-                <ul>
-                    <li>User123</li>
-                    <li>StorySeeker88</li>
-                    <li>Anon321</li>
-                </ul>
-            </aside>
+            <div class="dashboard-item" id="daily-wellness">
+                <h3><i class="fas fa-heart-pulse"></i> Today's Wellness Focus</h3>
+                <div class="data-content"></div>
+            </div>
+
+            <div class="dashboard-item" id="meditation-timer">
+                <h3><i class="fas fa-om"></i> Mindful Moment</h3>
+                <div class="timer-controls">
+                    <button class="start-timer">Start 5-Min Meditation</button>
+                </div>
+            </div>
         </section>
 
-        <!-- Initial Carousel -->
-        <section class="carousel-container" id="featured-carousel">
-            <div class="small-box"></div>
-            <div class="small-box"></div>
-            <div class="small-box"></div>
-            <div class="small-box"></div>
-            <div class="small-box"></div>
-            <div class="small-box"></div>
-            <div class="small-box"></div>
-            <div class="small-box"></div>
+        <!-- Wellness News Carousel -->
+        <section class="carousel-container" id="wellness-carousel">
+            <h2>Latest in Health & Wellness</h2>
+            <div class="carousel-track">
+                <!-- Will be populated by JS -->
+            </div>
+            <div class="carousel-nav">
+                <button class="prev">←</button>
+                <button class="next">→</button>
+            </div>
         </section>
 
-        <!-- Initial 5 Trending Stories -->
-        <section class="initial-trending">
-            <div class="trending-stories-container">
-                <article class="my-box trending">
-                    <h3>Trending Story #1</h3>
-                    <p>Short and intriguing summary.</p>
-                </article>
+        <!-- Trending Wellness Topics -->
+        <section class="wellness-grid">
+            <div class="grid-item nutrition">
+                <h3><i class="fas fa-apple-alt"></i> Nutrition Insights</h3>
+                <div class="content" id="nutrition-content"></div>
             </div>
             
-            <div class="trending-stories-container">
-                <article class="my-box trending">
-                    <h3>Trending Story #2</h3>
-                    <p>Short and intriguing summary.</p>
-                </article>
+            <div class="grid-item exercise">
+                <h3><i class="fas fa-running"></i> Activity Tips</h3>
+                <div class="content" id="exercise-content"></div>
             </div>
             
-            <div class="trending-stories-container">
-                <article class="my-box trending">
-                    <h3>Trending Story #3</h3>
-                    <p>Short and intriguing summary.</p>
-                </article>
+            <div class="grid-item mental-health">
+                <h3><i class="fas fa-brain"></i> Mental Wellness</h3>
+                <div class="content" id="mental-health-content"></div>
             </div>
             
-            <div class="trending-stories-container">
-                <article class="my-box trending">
-                    <h3>Trending Story #4</h3>
-                    <p>Short and intriguing summary.</p>
-                </article>
+            <div class="grid-item community">
+                <h3><i class="fas fa-users"></i> Community Achievements</h3>
+                <div class="content" id="community-content"></div>
             </div>
-            
-            <div class="trending-stories-container">
-                <article class="my-box trending">
-                    <h3>Trending Story #5</h3>
-                    <p>Short and intriguing summary.</p>
-                </article>
+        </section>
+
+        <!-- Wellness Resources -->
+        <section class="resources-section">
+            <h2>Wellness Resources</h2>
+            <div class="resources-grid" id="resources-grid">
+                <!-- Will be populated by JS -->
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>robopigeon - Empowering your wellness journey</p>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="script.js"></script>
